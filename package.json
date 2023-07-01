@@ -1,0 +1,23 @@
+{
+  "name": "transfer_token_multi_parrachains",
+  "version": "1.0.0",
+  "description": "js for transferring tokens to different addresses in multi parachains",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoSmithX/transfer_token_multi_parrachains.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeoSmithX/transfer_token_multi_parrachains/issues"
+  },
+  "homepage": "https://github.com/NeoSmithX/transfer_token_multi_parrachains#readme",
+  "dependencies": {
+    "@polkadot/api": "^10.9.1"
+  }
+}
