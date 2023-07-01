@@ -29,7 +29,7 @@ async function main(){
     const keyring = new Keyring({ type: 'sr25519' })
     const signer = keyring.addFromUri(seed_phase)
     const anyChainAddress = signer.address
-    // console.log('my address is '+anyChainAddress)
+    console.log('my address is '+anyChainAddress)
     // return
     // load csv
     let csvData = fs.readFileSync('public_data/transfer_data.csv', 'utf8');
