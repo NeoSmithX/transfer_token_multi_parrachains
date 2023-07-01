@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/NeoSmithX/transfer_token_multi_parrachains#readme",
   "dependencies": {
-    "@polkadot/api": "^10.9.1"
+    "@polkadot/api": "^10.9.1",
+    "papaparse": "^5.4.1"
   }
 }
