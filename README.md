@@ -1,3 +1,13 @@
+# 版本要求：node 16+， typescript
+安装正确版本如下： 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+nvm --version
+nvm install 16
+node -v
+npm install -g typescript
+tsc -v
+
+
 # transfer_token_multi_parrachains
 简单的脚本，一键发送平行链代币到多个地址
 
