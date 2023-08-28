@@ -4,8 +4,6 @@
 
 1. yarn install
 
-~~2. 创建文件夹 private_data ， 在其中创建文件 seed.ts， 后者写入 export const my_seed = "xxx xxx xxx" 助记词请不要在公用电脑上写入 ~~
-
 2. 考虑到安全性，现在使用env的形式导入私钥。用户需在自己的terminal里输入 export my_seed="xxx xxx xxx"，其中xxx xxx xxx是助记词。
 
 3. 用户只用填写public_data中的csv数据。如需增加parachains的支持，要在rpc config等文件添加相应参数。
@@ -20,6 +18,6 @@ tip：
 
 如果要发送一共10KSM，账户中一定超过10ksm，比如11个（一是因为gas，二是因为keep_alive）
 
-本脚本只支持在KSM链发送KSM，在bifrost链发送BNC，以此类推。后续会增加在单一链发送不同token的支持。
+当前，本脚本只支持在KSM链发送KSM，在bifrost链发送BNC，以此类推。后续会增加在单一链发送不同token的支持。
 
 
