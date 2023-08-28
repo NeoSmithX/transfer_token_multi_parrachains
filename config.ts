@@ -9,7 +9,9 @@ interface type_decimal {
     [key: string]: number;
 }
 export const decimal:type_decimal  = {
-    'ksm': 10**12,
-    'bifrost_ksm': 10 **12,
-    'astar': 10**18 
+    'ksm': 1e12,
+    'bifrost_ksm': 1e12,
+    'astar': 1e18,
+    'zeitgeist': 1e10,
+    'centrifuge': 1e18 
 }

@@ -3,8 +3,8 @@ const { WsProvider} = require('@polkadot/rpc-provider')
 const { Keyring } = require('@polkadot/api')
 const Papa = require('papaparse')
 const fs = require('fs')
-import { my_seed } from "../private_data/seed"
-import { rpc_parachains } from "../public_data/rpc"
+
+import { rpc_parachains } from "./public_data/rpc"
 import { chain_names, decimal } from "../config"
 async function main(){
     // Construct
@@ -25,7 +25,7 @@ async function main(){
     // const api = await ApiPromise.create({ provider: wsProvider })
 
     // create account 
-    const seed_phase = my_seed
+    const seed_phase = process.env.my_seed as string
     const keyring = new Keyring({ type: 'sr25519' })
     const signer = keyring.addFromUri(seed_phase)
     const anyChainAddress = signer.address
@@ -48,7 +48,7 @@ async function main(){
         }
         let tx = await api[chain_name].tx.balances.transferKeepAlive(
             {Id: transfer_data[i].target_address},
-            (transfer_data[i].amount * decimal[chain_name] ).toLocaleString().replace(/[^\d.]/g, "")
+            Math.floor(transfer_data[i].amount * decimal[chain_name] ).toLocaleString().replace(/[^\d.]/g, "")
             
         )
         // console.log(transfer_data[i].target_address)
